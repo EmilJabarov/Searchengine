@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="landing-container">
+    <div class="hero-section" data-tilt data-tilt-max="5">
+        <h1 class="hero-title">PersonalSearch</h1>
+        <p class="hero-subtitle">Your AI-Powered Personal Search Assistant</p>
+    </div>
+
+    <div class="features-grid">
+        <div class="feature-card">
+            <i class="fas fa-brain"></i>
+            <h3>Smart Search</h3>
+            <p>Powered by AI to understand your preferences and deliver personalized results</p>
+        </div>
+        <div class="feature-card">
+            <i class="fas fa-history"></i>
+            <h3>Search History</h3>
+            <p>Track and revisit your previous searches with ease</p>
+        </div>
+        <div class="feature-card">
+            <i class="fas fa-user-cog"></i>
+            <h3>Custom Preferences</h3>
+            <p>Tailor your search experience to your specific needs</p>
+        </div>
+    </div>
+
+    <div class="cta-buttons">
+        <a href="{{ url_for('register') }}" class="btn btn-primary btn-lg">Get Started</a>
+        <a href="{{ url_for('login') }}" class="btn btn-outline">Login</a>
+    </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+<script>
+    VanillaTilt.init(document.querySelector(".hero-section"), {
+        max: 5,
+        speed: 400,
+        glare: true,
+        "max-glare": 0.2,
+    });
+</script>
+{% endblock %}

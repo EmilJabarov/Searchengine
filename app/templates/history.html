@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="history-container">
+    <h1>Search History</h1>
+    <div class="history-list">
+        {% for search in searches %}
+        <div class="history-item">
+            <div class="search-details">
+                <p class="original-query">Original: {{ search.query }}</p>
+                <p class="modified-query">Modified: {{ search.modified_query }}</p>
+                <p class="timestamp">{{ search.timestamp.strftime('%Y-%m-%d %H:%M:%S') }}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <form method="POST" class="search-form">
+        <div class="form-group">
+            <input type="text" name="query" class="form-control form-control-lg" placeholder="Enter your search query">
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg shadow-sm">
+            <i class="fas fa-search"></i> Search
+        </button>
+    </form>
+</div>
+{% endblock %}
