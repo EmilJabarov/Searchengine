@@ -9,7 +9,6 @@ class SearchService:
     @staticmethod
     def personalize_query(query, user_preferences, search_history):
         try:
-            # Create context from user preferences and recent searches
             recent_searches = [s.original_query for s in search_history[:5]]
             context = {
                 "preferences": user_preferences,
@@ -41,7 +40,6 @@ class SearchService:
             })
             results = search.get_dict()
             
-            # Enhanced results processing
             processed_results = []
             for result in results.get('organic_results', []):
                 processed_results.append({
