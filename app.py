@@ -159,7 +159,6 @@ def history():
     return render_template('history.html', searches=searches)
 
 def modify_query_with_gpt(query, preferences):
-    # Return original query if preferences are None, "None", or empty
     if not preferences or preferences == "None":
         return query
         
